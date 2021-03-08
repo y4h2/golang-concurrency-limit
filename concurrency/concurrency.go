@@ -84,7 +84,7 @@ func (rl *RateLimiter) ListJobs(jobType string, limit int) (map[string]string, e
 	return result, nil
 }
 
-// DeleteJob deletes a
+// DeleteJob deletes a job by its jobID
 func (rl *RateLimiter) DeleteJob(jobType string, limit int, jobID string) error {
 	slots, err := rl.ListJobs(jobType, limit)
 	if err != nil {
